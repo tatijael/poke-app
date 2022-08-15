@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 import routes from '../routes'
 
@@ -25,6 +26,7 @@ function App() {
             </Routes>
           </BrowserRouter>
       </ThemeProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
